@@ -18,7 +18,7 @@ set cursorline
 set showcmd
 
 if has('mouse')
-    set mouse=a
+    set mouse=n
 endif
 
 " tabs
@@ -28,3 +28,7 @@ set shiftwidth=4
 set expandtab
 set smarttab
 set autoindent
+
+" autoread
+set autoread
+au CursorHold * checktime
