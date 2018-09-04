@@ -6,11 +6,14 @@ nnoremap <localleader>ev :vsp ~/vimrc_config/nvim/config/keys.vimrc<cr>
 " Map <localleader>sv to source $MYVIMRC
 nnoremap <localleader>sv :source $MYVIMRC<cr>:nohl<cr>
 
-" Map ctrl-u in insert mode to convert a word to uppercase
-inoremap <localleader><c-u> <esc>viwUea
+" Map localleader-u in insert mode to convert a word to uppercase
+inoremap <localleader>u <esc>viwUea
 
-" Map ctrl-u in normal mode to convert a word to uppercase
-nnoremap <localleader><c-u> viwUe
+" Map localleader-u in normal mode to convert a word to uppercase
+nnoremap <localleader>u viwUe
+
+" Map localleader-" in visual mode to encase a text in quotation marks
+vnoremap <localleader>" <esc>'<i"<esc>'>"<esc>
 
 " Auto save file if already in .vimrc
 augroup file_type_vim
@@ -57,7 +60,7 @@ augroup filetype_cpp
     autocmd!
     autocmd FileType cpp setlocal wrap
     autocmd FileType cpp nnoremap <localleader>c I// <esc>
-    autocmd FileType cpp vnoremap // <esc>'<O<esc>i/*<esc>'>o<esc>i*/<esc>
+    autocmd FileType cpp vnoremap <localleader>c <esc>'<O<esc>i/*<esc>'>o<esc>i*/<esc>
 augroup END
 
 " Map jk in insert mode to <esc> and disable the old <esc>
