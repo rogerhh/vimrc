@@ -100,7 +100,7 @@ let g:LanguageClient_serverCommands = {
     \ 'c.doxygen': ['clangd-6.0'],
     \ 'cpp': ['clangd-6.0'],
     \ 'cpp.doxygen': ['clangd-6.0'],
-    \ 'python': ['pyls'],
+    \ 'python': ['pyls']
     \ }
 
 let g:LanguageClient_autoStart = 1
