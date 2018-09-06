@@ -96,12 +96,14 @@ set hidden
 "
 "       (Obviously, this only works if you have bear installed.)
 let g:LanguageClient_serverCommands = {
-    \ 'c': ['clangd'],
-    \ 'c.doxygen': ['clangd'],
-    \ 'cpp': ['clangd'],
-    \ 'cpp.doxygen': ['clangd'],
-    \ 'python': ['pyls']
+    \ 'c': ['clangd-6.0'],
+    \ 'c.doxygen': ['clangd-6.0'],
+    \ 'cpp': ['clangd-6.0'],
+    \ 'cpp.doxygen': ['clangd-6.0'],
+    \ 'python': ['pyls'],
     \ }
+
+let g:LanguageClient_autoStart = 1
 
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
