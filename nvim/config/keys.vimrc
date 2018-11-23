@@ -63,6 +63,14 @@ augroup filetype_cpp
     autocmd FileType cpp vnoremap <localleader>c <esc>'<O<esc>i/*<esc>'>o<esc>i*/<esc>
 augroup END
 
+" Group c specific settings
+augroup filetype_c
+    autocmd!
+    autocmd FileType c setlocal wrap
+    autocmd FileType c nnoremap <localleader>c I// <esc>
+    autocmd FileType c vnoremap <localleader>c <esc>'<O<esc>i/*<esc>'>o<esc>i*/<esc>
+augroup END
+
 " Map jk in insert mode to <esc> and disable the old <esc>
 inoremap jk <esc>l
 inoremap <localleader>jk <localleader><esc>l
