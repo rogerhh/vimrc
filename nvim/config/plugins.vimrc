@@ -27,7 +27,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'ncm2/ncm2-bufword'
 " Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
-" Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-jedi'
 
 " nerdtree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
@@ -39,6 +39,8 @@ call plug#end()
 
 " Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing)
+let g:neomake_cpp_enabled_makers = ['clang']
+let g:neomake_cpp_clang_args = ["-std=c++14", "-Wall"]
 call neomake#configure#automake('w')
 
 " END Neomake setting
@@ -96,10 +98,10 @@ set hidden
 "
 "       (Obviously, this only works if you have bear installed.)
 let g:LanguageClient_serverCommands = {
-    \ 'c': ['clangd-6.0'],
-    \ 'c.doxygen': ['clangd-6.0'],
-    \ 'cpp': ['clangd-6.0'],
-    \ 'cpp.doxygen': ['clangd-6.0'],
+    \ 'cpp': ['clangd'],
+    \ 'c': ['clangd'],
+    \ 'c.doxygen': ['clangd'],
+    \ 'cpp.doxygen': ['clangd'],
     \ 'python': ['pyls']
     \ }
 
