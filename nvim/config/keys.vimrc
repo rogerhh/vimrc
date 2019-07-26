@@ -1,7 +1,7 @@
 :let maplocalleader = ","
 
 " Map <localleader>ev to open key mappings file
-nnoremap <localleader>ev :vsp ~/vimrc_config/nvim/config/keys.vimrc<cr>
+nnoremap <localleader>ev :vsp ~/vimrc/nvim/config/keys.vimrc<cr>
 
 " Map <localleader>sv to source $MYVIMRC
 nnoremap <localleader>sv :source $MYVIMRC<cr>:nohl<cr>
@@ -60,7 +60,7 @@ augroup filetype_cpp
     autocmd!
     autocmd FileType cpp setlocal wrap
     autocmd FileType cpp nnoremap <localleader>c I// <esc>
-    autocmd FileType cpp vnoremap <localleader>c <esc>'<O<esc>i/*<esc>'>o<esc>i*/<esc>
+    autocmd FileType cpp vnoremap <localleader>c <esc>'<O<esc>S/*<esc>'>o<esc>S*/<esc>
 augroup END
 
 " Group c specific settings
@@ -68,7 +68,7 @@ augroup filetype_c
     autocmd!
     autocmd FileType c setlocal wrap
     autocmd FileType c nnoremap <localleader>c I// <esc>
-    autocmd FileType c vnoremap <localleader>c <esc>'<O<esc>i/*<esc>'>o<esc>i*/<esc>
+    autocmd FileType c vnoremap <localleader>c <esc>'<O<esc>S/*<esc>'>o<esc>S*/<esc>
 augroup END
 
 " Map jk in insert mode to <esc> and disable the old <esc>
