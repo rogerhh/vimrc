@@ -15,7 +15,7 @@ Plug 'neomake/neomake'
 
 " neovim-complietion-manager
 Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
+Plug 'roxma/nvim-yarp', { 'do': 'pip install -r requirements.txt' }
 
 " language client
 Plug 'autozimu/LanguageClient-neovim', {
@@ -25,7 +25,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 " some completion sources
 Plug 'ncm2/ncm2-bufword'
-" Plug 'ncm2/ncm2-tmux'
+" Plug 'welle/tmux-conplete.vim'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-jedi'
 
@@ -43,16 +43,16 @@ call plug#end()
 
 " Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing)
-let g:neomake_cpp_enabled_makers = ['clang']
+let g:neomake_cpp_enabled_makers = ['clangd']
 let g:neomake_cpp_clang_args = ["-std=c++14", "-Wall"]
-call neomake#configure#automake('w')
+call neomake#configure#automake('w', 1000)
 
 " END Neomake setting
 
 " ncm2 settings
 
 " Enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
+autocmd BufEnter *.cpp call ncm2#enable_for_buffer()
 
 " Must keep noinsert
 set completeopt=noinsert,menuone,noselect
