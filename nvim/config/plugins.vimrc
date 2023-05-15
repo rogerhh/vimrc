@@ -32,6 +32,10 @@ Plug 'ncm2/ncm2-jedi'
 " nerdtree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
 
+" vim-misc and vim-session
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+
 " END list of plugins
 call plug#end()
 
@@ -119,3 +123,8 @@ nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 map <c-n> :NERDTreeToggle<cr>
 
 " END nerdtree settings
+
+" vim-session settings
+let g:session_autoload = 'no'
+let g:session_autosave = 'no'
+" END vim-session settings

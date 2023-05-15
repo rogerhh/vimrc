@@ -80,6 +80,9 @@ inoremap <c-[> <nop>
 vnoremap jk <esc>
 vnoremap <c-[> <nop>
 
+" Map <esc> in terminal mode to quit
+tnoremap <esc> <c-\><c-n>
+
 " Disable arrow keys
 noremap <left> <nop>
 noremap <right> <nop>
