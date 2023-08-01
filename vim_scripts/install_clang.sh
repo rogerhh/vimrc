@@ -10,11 +10,11 @@ INSTALLCMD="sudo apt-get install -y --fix-missing"
 # Add LLVM repository
 #wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
 
-sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main"
+# sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-12.0 main"
 sudo apt-get update
-$INSTALLCMD clang*6.0 clang-tools-6.0
+$INSTALLCMD clang*12 clang-tools-12
 $INSTALLCMD clang lldb # "ordinary" clang and LLDB, for remote debugging
 
-sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-6.0 100
-sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-6.0 100
-sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-6.0 100
+sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-12 200
+sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-12 200
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 200

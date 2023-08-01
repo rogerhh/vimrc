@@ -36,6 +36,9 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
+" nvim markdown
+Plug 'ixru/nvim-markdown'
+
 " END list of plugins
 call plug#end()
 
