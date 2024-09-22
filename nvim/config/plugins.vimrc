@@ -43,6 +43,9 @@ Plug 'ixru/nvim-markdown'
 Plug 'zbirenbaum/copilot.lua'
 Plug 'zbirenbaum/copilot-cmp'
 
+" Syntax highlighting
+Plug 'morhetz/gruvbox'
+
 " END list of plugins
 call plug#end()
 
@@ -141,3 +144,7 @@ luafile ~/.vim/plugged/copilot.lua/lua/copilot/init.lua
 " luafile plugins.lua
 
 
+" Color scheme
+set background=dark
+set termguicolors
+colorscheme gruvbox
