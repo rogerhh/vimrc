@@ -39,6 +39,10 @@ Plug 'xolox/vim-session'
 " nvim markdown
 Plug 'ixru/nvim-markdown'
 
+" copilot for nvim
+Plug 'zbirenbaum/copilot.lua'
+Plug 'zbirenbaum/copilot-cmp'
+
 " END list of plugins
 call plug#end()
 
@@ -131,3 +135,9 @@ map <c-n> :NERDTreeToggle<cr>
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 " END vim-session settings
+
+" lua plugins
+luafile ~/.vim/plugged/copilot.lua/lua/copilot/init.lua
+" luafile plugins.lua
+
+
