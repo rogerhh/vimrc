@@ -29,8 +29,8 @@ require('copilot').setup({
     debounce = 75,
     keymap = {
       accept = "<M-l>",
-      accept_word = false,
-      accept_line = false,
+      accept_word = true,
+      accept_line = true,
       next = "<M-]>",
       prev = "<M-[>",
       dismiss = "<C-]>",

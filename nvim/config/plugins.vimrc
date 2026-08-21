@@ -139,12 +139,12 @@ let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 " END vim-session settings
 
-" lua plugins
-luafile ~/.vim/plugged/copilot.lua/lua/copilot/init.lua
-" luafile plugins.lua
-
-
 " Color scheme
 set background=dark
 set termguicolors
 colorscheme gruvbox
+
+" lua plugins
+luafile ~/.vim/plugged/copilot.lua/lua/copilot/init.lua
+" luafile ~/vimrc/nvim/config/plugins.lua
+" luafile plugins.lua
