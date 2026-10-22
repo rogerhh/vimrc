@@ -10,7 +10,9 @@ for _, key in ipairs({ "<Left>", "<Right>", "<Up>", "<Down>" }) do
     map({ "n", "x", "s", "o", "i" }, key, "<Nop>", { desc = "Arrow key disabled" })
 end
 map({ "i", "x" }, "<C-[>", "<Nop>", { desc = "Use jk to leave this mode" })
-map({ "i", "x" }, "jk", "<Esc>", { desc = "Leave insert or visual mode" })
+-- Escape shifts left; return to the insertion position after leaving insert mode.
+map("i", "jk", "<Esc>`^", { desc = "Leave insert mode without moving cursor" })
+map("x", "jk", "<Esc>", { desc = "Leave visual mode" })
 map("i", "<C-c>", "<Esc>")
 map("t", "<Esc>", "<C-\\><C-n>", { desc = "Leave terminal mode" })
 map({ "n", "x" }, "H", "^", { desc = "First nonblank character" })

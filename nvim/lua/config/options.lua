@@ -23,6 +23,8 @@ opt.scrolloff = 5
 opt.updatetime = 250
 opt.timeoutlen = 400
 opt.wrap = true
+-- Keep the insertion position when jk exits just past the last character.
+opt.virtualedit:append("onemore")
 opt.completeopt = "menu,menuone,noselect"
 opt.autoread = true
 opt.confirm = true

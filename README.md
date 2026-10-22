@@ -67,7 +67,7 @@ Space is the leader and comma is the local leader.
 | `Space ss/sr/sd` | Save, restore, delete named session |
 | `Space pm/pl` | Mason / Lazy plugin manager |
 
-Completion uses [mini.completion](https://nvim-mini.org/mini.nvim/doc/mini-completion.html) with LSP suggestions and buffer-word fallback. Enter inserts a newline when nothing is selected. Session saving and restoring are manual. Arrow keys are disabled in normal, visual, select, operator-pending, and insert modes. Ctrl+[ is disabled in insert and visual modes; because it shares the Escape key code, use `jk` to leave those modes. Terminal Escape remains available. Quote/bracket insertion uses the original two-character shortcuts instead of automatic pairing. Files are never reformatted automatically when opened or saved.
+Completion uses [mini.completion](https://nvim-mini.org/mini.nvim/doc/mini-completion.html) with LSP suggestions and buffer-word fallback. Enter inserts a newline when nothing is selected. Session saving and restoring are manual. Arrow keys are disabled in normal, visual, select, operator-pending, and insert modes. Ctrl+[ is disabled in insert and visual modes; because it shares the Escape key code, use `jk` to leave those modes. In insert mode, `jk` preserves the cursor position, including just past the last character of a line (`virtualedit=onemore`). Terminal Escape remains available. Quote/bracket insertion uses the original two-character shortcuts instead of automatic pairing. Files are never reformatted automatically when opened or saved.
 
 ## Layout
 
