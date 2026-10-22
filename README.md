@@ -74,3 +74,13 @@ Completion uses [mini.completion](https://nvim-mini.org/mini.nvim/doc/mini-compl
 `nvim/init.lua` loads `lua/config/options.lua`, `keymaps.lua`, `autocmds.lua`, and `lazy.lua`. Plugin specifications live in `lua/config/plugins.lua`. Four spaces remain the default indentation; Lua and common web configuration formats use two.
 
 The old Vimscript configuration, vim-plug installer, and obsolete Clang/Python installation scripts have been replaced. To roll back, remove the configuration symlink and move the setup script's backup back to the original path. Repository history also retains the original files.
+
+## Sync to an SSH host
+
+`~/sync-nvim.sh` links to this repository's `sync-nvim.sh`. Run:
+
+```sh
+~/sync-nvim.sh horde
+```
+
+This copies the active config, installed plugins, language servers, Neovim, Node/npm, unzip, and ICU to a Linux x86_64 host with Git and rsync. Existing remote settings are backed up. Each upload shows progress; the first sync transfers roughly 1 GB before compression and may take several minutes. SSH uses keepalives, and transfers fail after 120 seconds without I/O. Errors identify the phase that failed. Interrupting with Ctrl+C stops the sync; an interrupted upload can leave a staging directory under the remote `~/.cache/codex-nvim-sync-*` path. Run again to start a new attempt.
